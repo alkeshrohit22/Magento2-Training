@@ -18,16 +18,11 @@ class AdditionalConfigVars implements ConfigProviderInterface
      */
     public function getConfig()
     {
-        $writer = new \Zend_Log_Writer_Stream(BP . '/var/log/custom.log');
-        $logger = new \Zend_Log();
-        $logger->addWriter($writer);
-        $logger->info('Yeah, I am in this file!');
-
+        /** @var $commentTitle $commentTitle */
         $commentTitle = $this->orderConfiguration->getCustomerCommentTitle();
-        $commentDescription = $this->orderConfiguration->getCustomerCommentDescription();
 
-        $logger->info('Comment title : '. $commentTitle);
-        $logger->info("Comment Desc : " . $commentDescription);
+        /** @var $commentDescription $commentDescription */
+        $commentDescription = $this->orderConfiguration->getCustomerCommentDescription();
 
         $additionalVariables['commentTitle'] = $commentTitle;
         $additionalVariables['commentDescription'] = $commentDescription;
