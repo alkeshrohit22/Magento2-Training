@@ -4,18 +4,27 @@ namespace Sigma\ProductMaterial\Setup;
 
 use Magento\Catalog\Model\Product;
 use Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface;
+use Magento\Eav\Setup\EavSetupFactory;
 use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 
 class InstallData implements InstallDataInterface
 {
+    /**
+     * @param EavSetupFactory $eavSetupFactory
+     */
     public function __construct(
         private \Magento\Eav\Setup\EavSetupFactory $eavSetupFactory
     )
     {
     }
 
+    /**
+     * @param ModuleDataSetupInterface $setup
+     * @param ModuleContextInterface $context
+     * @return void
+     */
     public function install(
         ModuleDataSetupInterface $setup,
         ModuleContextInterface $context

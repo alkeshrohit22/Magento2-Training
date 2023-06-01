@@ -4,10 +4,16 @@ namespace Sigma\FreeShippingBar\Block;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\View\Element\Template;
+use Magento\Framework\View\Element\Template\Context;
 use Magento\Store\Model\ScopeInterface;
 
 class Freeshipping extends Template
 {
+    /**
+     * @param Context $context
+     * @param ScopeConfigInterface $scopeConfig
+     * @param array $data
+     */
     public function __construct(
         Template\Context $context,
         private ScopeConfigInterface $scopeConfig,
