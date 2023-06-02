@@ -348,9 +348,10 @@ return [
         'Magento_WishlistSampleData' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
+        'Sigma_CrudAssignment' => 1,
         'Sigma_FreeShippingBar' => 0,
         'Sigma_OrderComment' => 0,
-        'Sigma_ProductMaterial' => 1,
+        'Sigma_ProductMaterial' => 0,
         'Sigma_ShippingAddress' => 0,
         'Temando_ShippingRemover' => 1
     ]
