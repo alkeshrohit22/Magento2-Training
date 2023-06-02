@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sigma_CrudAssignment::manager" title="Form Manager" module="Sigma_CrudAssignment"
+             sortOrder="10" resource="Sigma_CrudAssignment::manager"/>
+        <add id="Sigma_CrudAssignment::add_row" title="Form Manager" module="Sigma_CrudAssignment"
+             sortOrder="20" parent="Sigma_CrudAssignment::manager" action="grid/grid"
+             resource="Sigma_CrudAssignment::add_row"/>
+    </menu>
+</config>

@@ -1,0 +1,20 @@
+{
+  "name": "sigma/module-crud-assignment",
+  "version": "1.0.0",
+  "description": "Crud Assignment module",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Sigma\\CrudAssignment\\": ""
+    }
+  }
+}
