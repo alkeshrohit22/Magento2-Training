@@ -7,9 +7,6 @@ use Sigma\CrudAssignment\Model\CrudAssignment;
 
 class Collection extends AbstractCollection
 {
-    /** @var string  */
-    protected $_idFieldName = 'id';
-
     /**
      * Define resource model.
      */
@@ -19,5 +16,6 @@ class Collection extends AbstractCollection
             CrudAssignment::class,
             \Sigma\CrudAssignment\Model\ResourceModel\CrudAssignment::class
         );
+        parent::_construct();
     }
 }
