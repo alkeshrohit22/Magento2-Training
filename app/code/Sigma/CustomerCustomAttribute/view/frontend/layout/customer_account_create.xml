@@ -3,7 +3,8 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="form.additional.info">
-            <block name="deptor-account-number" template="Sigma_CustomerCustomAttribute::form/deptorAccountNumber.phtml" />
+            <block name="deptor-account-number" class="Magento\Framework\View\Element\Template"
+                   template="Sigma_CustomerCustomAttribute::form/deptorAccountNumber.phtml" />
         </referenceContainer>
     </body>
 </page>
