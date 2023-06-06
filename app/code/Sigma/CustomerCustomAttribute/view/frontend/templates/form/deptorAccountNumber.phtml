@@ -6,7 +6,9 @@
                title="<?php /* @escapeNotVerified */ echo __('Deptor Account Number') ?>"
                class="input-text"
                autocomplete="on"
-               data-validate="{required:true}"
+               minlength="10"
+               maxlength="15"
+               data-validate='{"required": true, "validate-number": true}'
         >
     </div>
 </div>
