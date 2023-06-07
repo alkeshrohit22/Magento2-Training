@@ -1,0 +1,11 @@
+type Query {
+    disabledProductsList: [GetAllDisableProducts] @resolver(class: "Sigma\\GraphQL\\Model\\Resolver\\GetProductList") @doc(description: "Get All disable Product Data")
+}
+
+type GetAllDisableProducts {
+    entityId: Int @doc(description: "Primary Id"),
+    proName: String @doc(description: "Product Name"),
+    sku: String @doc(description: "sku of Product"),
+    category: String @doc(description: "Category of Product"),
+    weight: String @doc(description: "Weight of Product"),
+}
