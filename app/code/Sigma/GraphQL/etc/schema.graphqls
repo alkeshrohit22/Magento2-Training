@@ -2,6 +2,11 @@ type Query {
     disabledProductsList: [GetAllDisableProducts] @resolver(class: "Sigma\\GraphQL\\Model\\Resolver\\GetProductList") @doc(description: "Get All disable Product Data")
 
     dailyDeal: GetSpecialPriceProduct @resolver(class: "Sigma\\GraphQL\\Model\\Resolver\\SpecialDealProduct") @doc(description: "Get All special product's sku list")
+
+    orders(
+        startDate: String! @doc(description: "Start Date"),
+        endDate: String! @doc(description: "End Date")
+    ): [Orders] @resolver(class: "Sigma\\GraphQL\\Model\\Resolver\\OrderDetails")  @doc(description: "Get Order Details")
 }
 
 type GetAllDisableProducts {
@@ -14,4 +19,16 @@ type GetAllDisableProducts {
 
 type GetSpecialPriceProduct {
     products_skus: [String!]! @doc(description: "sku of products")
+}
+
+type Orders {
+    order_id: Int @doc(description: "Order Id"),
+    increment_id: String @doc(description: "Increment Id"),
+    items: [Items] @doc(description: "Item details")
+}
+
+type Items @doc(description: "Getting all ordered product details"){
+    item_id: Int @doc(description: "Product Id"),
+    item_name: String @doc(description: "Product Name"),
+    qty: String @doc(description: "Quantity of Product")
 }
