@@ -1,5 +1,7 @@
 type Query {
     disabledProductsList: [GetAllDisableProducts] @resolver(class: "Sigma\\GraphQL\\Model\\Resolver\\GetProductList") @doc(description: "Get All disable Product Data")
+
+    dailyDeal: GetSpecialPriceProduct @resolver(class: "Sigma\\GraphQL\\Model\\Resolver\\SpecialDealProduct") @doc(description: "Get All special product's sku list")
 }
 
 type GetAllDisableProducts {
@@ -8,4 +10,8 @@ type GetAllDisableProducts {
     sku: String @doc(description: "sku of Product"),
     category: String @doc(description: "Category of Product"),
     weight: String @doc(description: "Weight of Product"),
+}
+
+type GetSpecialPriceProduct {
+    products_skus: [String!]! @doc(description: "sku of products")
 }
